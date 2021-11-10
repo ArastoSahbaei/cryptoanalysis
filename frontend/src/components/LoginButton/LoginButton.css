@@ -18,7 +18,7 @@
     cursor: pointer;
     color: blue;
   }
-  .email{
+  /* .email{
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(207, 214, 228);
     border-radius: 8px;
@@ -45,7 +45,7 @@
     font-size: 14px;
     height: 48px;
     line-height: 21px;
-  }
+  } */
   .submit{
     -webkit-box-align: center;
     align-items: center;
