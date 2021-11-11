@@ -45,7 +45,7 @@ export const LoginButton = () => {
                         <TextValidator onChange={event => setEmail(event.target.value)} type="email"  label="Email" value={email} name="email" validators={['required', 'isEmail']} errorMessages={['this field is required', 'email is not valid']} />
                         </div><br/>
                         <div>
-                        <TextValidator onChange={event => setPassword(event.target.value)} type="password" label="Password" name="password"  validators={['required', 'matchRegexp:^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$']} errorMessages={['this field is required', 'Minimum eight characters, at least one letter, one number and one special character']} value={password}  />
+                        <TextValidator onChange={event => setPassword(event.target.value)} type="password" label="Password" name="password"  validators={['required', 'matchRegexp:^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$']} errorMessages={['this field is required']} value={password}  />
                         
                         <div id="noMatch">Your email or password doesnt match. Please try again</div>
                         </div><br/>
