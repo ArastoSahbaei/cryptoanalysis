@@ -21,10 +21,15 @@ export const Profile = () => {
             setError(error);
         }
     }
+    const handleUserPage = () =>{
+        history.push('/userpage')
+    }
 
     useEffect(() => {
         fetchData(authenticatedUser)
     }, [authenticatedUser])
+
+   
 
     const logout = async () => {
 
@@ -48,10 +53,10 @@ export const Profile = () => {
         return "";
     } else {
         return (
-            <div>  
-                <span>{user.logged_in_as.name}</span>
-                <hr/>
-                <button onClick={() => logout()}> Logout</button>
+            <div className="profileWrapper">  
+                <span className="userLoggedIn">{user.logged_in_as.name}</span>
+                <button className="logOutButton"  onClick={() => logout()}> Logout</button>
+                <button className="myPageButton" onClick={handleUserPage}>My page</button>
             </div>
         )
     }

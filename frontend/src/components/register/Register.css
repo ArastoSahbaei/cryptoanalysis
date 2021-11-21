@@ -1,30 +1,73 @@
-.registerPage{
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    align-content:  center;
-
-}
-
-.formWrapper{
-    grid-column: 5 / 9;
-    margin: 10px 0;
-}
-.formWrapper h1{
-    text-align: center;
-}
-.formWrapper input{
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0px 15px 0px;
-    display: block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
   .help{
       color: rgb(241, 22, 62);
   }
   #noMatch{
     visibility: hidden;
     color: red;
+  }
+  
+  .regSubmit{
+    -webkit-box-align: center;
+    align-items: center;
+    background: rgb(158, 153, 153);
+    border: 0px;
+    border-radius: 8px;
+    display: inline-flex;
+    color: rgb(15, 15, 14);
+    cursor: pointer;
+    -webkit-box-pack: center;
+    justify-content: center;
+    outline: 0px;
+    font-weight: 600;
+    width: 100%;
+    height: 48px;
+    font-size: 14px;
+    padding: 0px 24px;
+    line-height: 24px;
+  }
+  .input{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(207, 214, 228);
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    max-width: 100%;
+    outline: 0px;
+    padding: 0px 16px;
+    width: 100%;
+    font-size: 14px;
+    height: 48px;
+    line-height: 21px;
+  }
+  .regTriggerButton{
+    -webkit-box-align: center;
+    align-items: center;
+    background: rgb(158, 153, 153);
+    border: 0px;
+    border-radius: 8px;
+    display: inline-flex;
+    color: rgb(15, 15, 14);
+    cursor: pointer;
+    -webkit-box-pack: center;
+    justify-content: center;
+    outline: 0px;
+    font-weight: 600;
+    width: 50px;
+    height: 32px;
+    font-size: 12px;
+    padding: 0px 16px;
+    line-height: 18px;
+  }
+  .formWrapper > .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
   }

@@ -5,6 +5,7 @@ import validate from './RegisterFormValidationRules';
 import CryptoShuttleService from '../../utils/api/services/CryptoShuttleService';
 import { UserContext } from "../../shared/global/provider/UserProvider"
 import { RegUserContext } from "../../shared/global/provider/RegUserProvider";
+import Popup from "reactjs-popup";
 
 export const Register = (props) => {
 
@@ -57,10 +58,14 @@ export const Register = (props) => {
       };
     
     return (
-        <div className="registerPage">
-            
+        <div>
+            <Popup  trigger={<button className="regTriggerButton"> Register</button>} modal >
+                {close => (
             <div className="formWrapper">
-                <h1 className="title">{props.title}</h1>
+                <button className="close" onClick={close}>
+                &times;
+                </button>
+                <h4>Register</h4>
                 <form onSubmit={handleSubmit} noValidate>
         
                     <label htmlFor="email">Email</label><input autoComplete="off" className={`input ${errors.email}`} type="email" name="email" onChange={handleChange} value={values.email || ''} required />
@@ -81,9 +86,11 @@ export const Register = (props) => {
                     <p className="help">{errors.confirmPassword}</p>
                     )}
                     <div id="noMatch">{registerError}</div>
-                    <button type="submit">Register</button>
+                    <button type="submit" className="regSubmit">Register</button>
                 </form>
             </div>
+                )}
+            </Popup>
         </div>
     )
 }

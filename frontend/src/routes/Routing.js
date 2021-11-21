@@ -28,10 +28,10 @@ export const Routing = (props) => {
             {props.children}
             <Switch>
                 {
-                !localStorage.getItem('token') ? <Redirect from='/userpage' to='/' /> : <Route exact path="/userpage" component={UserView} />
+                localStorage.getItem('token') ? <Redirect from='/userpage' to='/' /> : <Route exact path="/userpage" component={UserView} />
                 } 
                 {
-                localStorage.getItem('token') ? <Redirect from='/userregister' to='/' /> : <Route exact path="/userregister" component={RegisterView} />
+                /* localStorage.getItem('token') ? <Redirect from='/userregister' to='/' /> : <Route exact path="/userregister" component={RegisterView} /> */
                 } 
                 <Route path="/coins/:slug" component={CoinView} />
                 <Route component={HomeView} />

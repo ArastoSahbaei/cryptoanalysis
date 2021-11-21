@@ -4,17 +4,23 @@
     display: grid;
     grid-template-columns: repeat(10, 1fr);
 }
-.loginButton{
-    grid-column: 3/10;
-    align-self: center;
-}
 .logotype{
+    cursor: pointer;
     width: 100px;
 }
-.register{
-    align-self: center;
+.logField{
+    display: flex;
+    margin-top: 25px;
+    gap: 20px;
 }
-.logotype,
-.register{
-    cursor: pointer;
+.profileWrapper{
+    display:flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+.profileWrapper button{
+    background-color: pink;
+    border-radius: 8px;
 }
