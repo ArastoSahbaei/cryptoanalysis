@@ -14,7 +14,7 @@ import { RunForecastButton } from "../../components/Forecast/RunForecastButton";
 export const CoinView = () => {
     const signInRef = useRef()
     const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext)
-
+    
     
     
     const displayIfNotAuth = () => {
@@ -33,7 +33,7 @@ export const CoinView = () => {
                 <CoinHistoryGraph />
                 <SaveLastViewed />                
                 <RunForecastButton/>
-                                                        
+                                                       
                 <div ref={signInRef} className="sign-in">
                     {authenticatedUser == null && <LoginButton/>}
                     {authenticatedUser == null && <SignUpLink/>}

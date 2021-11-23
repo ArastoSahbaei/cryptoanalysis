@@ -2,7 +2,7 @@ import React,{useState, useContext, useRef} from "react";
 import Forecast from "./Forecast";
 import CryptoShuttleService from "../../utils/api/services/CryptoShuttleService";
 import { UserContext } from '../../shared/global/provider/UserProvider'
-
+import LesserForecast from "../LesserForecast/LesserForecast";
 
 export const RunForecastButton = () => {
     let btnRef = useRef();
@@ -14,25 +14,30 @@ export const RunForecastButton = () => {
         if(authenticatedUser != null && btnRef.current){
             btnRef.current.setAttribute("hidden", "hidden");
             
+            
         }
+        
+        else if(authenticatedUser == null && btnRef.current){
+            
+            btnRef.current.setAttribute("hidden", "hidden")
+            
+        } 
+
         
         userAuthBackend()
         
         
-        
-        
-        
-        
     }
+    
     const userAuthBackend = async () => {
         
         setAuthenticatedUser(localStorage.getItem('token'))
-        console.log(authenticatedUser)
+        
 
         if(authenticatedUser == null){
             console.log('login to use')
         }else if(authenticatedUser != null) {
-                console.log(authenticatedUser)
+                
                 
             try{
                 const getUserWithToken = await CryptoShuttleService.getLoggedInUser(localStorage.getItem('token'))
@@ -46,15 +51,14 @@ export const RunForecastButton = () => {
         
     }
 
-
-
     return (
         
         
         <div className="forecast-button">
-            <input ref={btnRef} type="submit" value="Run Forecast" onClick={onClick} />
+            <input ref={btnRef} id="forecastBtn" type="submit" value="Run Forecast" onClick={onClick} />
             { showResults && user && <Forecast user={user}/> }
-
+            { !user && showResults && <LesserForecast/> }
+            
         </div>
 
 

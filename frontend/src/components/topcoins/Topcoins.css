@@ -23,6 +23,6 @@ td {
     color: green;
 }
 
-tbody tr{
+.topcoins tbody tr{
     cursor: pointer;
 }

@@ -91,6 +91,29 @@ def user_option_forecast():
     return jsonify(response)
 
 
+# Forecast with significally less data (can be altered with the variable "days")
+@app.route('/rest/forecast/lesser/coins', methods=['GET'])
+def visitor_option_forecast():
+    cryptos = []
+
+    resp = request.args.get('coin')
+    cryptos.append(resp)
+    days = 15
+    currency = 'usd'
+    coin_market_period = 'max'
+    result, res, multiple = analyseChosenCoins(cryptos=cryptos, days=days, currency=currency, coin_market_period=coin_market_period)
+    result = numeric_evaluations(result)
+
+    response = {}
+    response['coin'] = result
+    response['graph'] = res
+    response['multiple'] = multiple
+    return jsonify(response)
+
+
+
+
+
    
 # Fetches topchart for home page , with market data coin name , icon etc.
 @app.route('/rest/topchart', methods=['GET'])

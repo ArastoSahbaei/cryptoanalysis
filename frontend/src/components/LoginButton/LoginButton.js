@@ -18,6 +18,13 @@ export const LoginButton = () => {
         const userFromServer = await CryptoShuttleService.loginUser({email, password})
         setAuthenticatedUser(userFromServer.data.access_token)
         localStorage.setItem("token", userFromServer.data.access_token)
+        /* document.getElementsById('noMatch').style.visibility = "hidden" */
+        let btn = document.getElementById('forecastBtn')
+        if(btn){
+
+            btn.removeAttribute("hidden")
+        }
+
         }
         catch(error){
             document.getElementById("noMatch").style.visibility = "visible"

@@ -68,5 +68,9 @@ const getSavedForecasts = (id) => {
     return http.get('/user/forecasts', {params: {'id': id}})
 }
 
-export default { topChart, loginUser, logoutUser, registerUser, marketGraph, trendingInfo, coinInfo, forecastInfo, lastViewed, globalMarketInfo, search, saveForecast, getLoggedInUser, getSavedForecasts}
+const lesserForecastInfo = (slug) => {
+    return http.get(`rest/forecast/lesser/coins?coin=${slug}`)
+}
+
+export default { topChart, loginUser, logoutUser, registerUser, marketGraph, trendingInfo, coinInfo, forecastInfo, lastViewed, globalMarketInfo, search, saveForecast, getLoggedInUser, getSavedForecasts, lesserForecastInfo}
 
