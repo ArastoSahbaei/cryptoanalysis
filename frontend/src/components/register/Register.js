@@ -6,12 +6,15 @@ import CryptoShuttleService from '../../utils/api/services/CryptoShuttleService'
 import { UserContext } from "../../shared/global/provider/UserProvider"
 import { RegUserContext } from "../../shared/global/provider/RegUserProvider";
 import Popup from "reactjs-popup";
+import { PopupsContext } from "../../shared/global/provider/popupsProvider";
 
 export const Register = (props) => {
 
     const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext)
     const [registerError, setRegisterError] = useContext(RegUserContext)
-    /* const [registerError, setRegisterError] = useState() */
+    const [open, setOpen] = useContext(PopupsContext);
+    const closeModal = () => setOpen(false);
+    
     const {
         values,
         errors,
