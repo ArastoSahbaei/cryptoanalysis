@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import "./SignUpLink.css"
-import { PopupsContext } from "../../shared/global/provider/popupsProvider"
+import { PopupsContext } from "../../shared/global/provider/PopupsProvider"
 
 
 export const SignUpLink = () => {

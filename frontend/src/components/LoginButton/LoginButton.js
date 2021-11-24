@@ -3,7 +3,7 @@ import './LoginButton.css'
 import Popup from "reactjs-popup"
 import { UserContext } from "../../shared/global/provider/UserProvider"
 import CryptoShuttleService from "../../utils/api/services/CryptoShuttleService"
-import { PopupsContext } from "../../shared/global/provider/popupsProvider"
+import { PopupsContext } from "../../shared/global/provider/PopupsProvider"
 
 
 export const LoginButton = () => {

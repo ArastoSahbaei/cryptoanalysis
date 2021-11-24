@@ -6,7 +6,7 @@ import CryptoShuttleService from '../../utils/api/services/CryptoShuttleService'
 import { UserContext } from "../../shared/global/provider/UserProvider"
 import { RegUserContext } from "../../shared/global/provider/RegUserProvider";
 import Popup from "reactjs-popup";
-import { PopupsContext } from "../../shared/global/provider/popupsProvider";
+import { PopupsContext } from "../../shared/global/provider/PopupsProvider";
 
 export const Register = (props) => {
 
@@ -63,7 +63,7 @@ export const Register = (props) => {
     
     return (
         <div className="formWrapper">
-            <button type="button" className="button" onClick={() => setOpen(o => !o)}>
+            <button type="button" className="registerButton" onClick={() => setOpen(o => !o)}>
             Sign Up
             </button>
             <Popup open={open} closeOnDocumentClick onClose={closeModal}>
