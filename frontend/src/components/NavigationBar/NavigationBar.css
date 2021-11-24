@@ -1,6 +1,6 @@
 .navBar{
     grid-area: header;
-    background-color: rgb(14, 241, 117);
+    background-color: white;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
 }

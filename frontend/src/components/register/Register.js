@@ -61,15 +61,17 @@ export const Register = (props) => {
       };
     
     return (
-        <div>
-            <Popup  trigger={<button className="regTriggerButton"> Register</button>} modal >
-                {close => (
-            <div className="formWrapper">
-                <button className="close" onClick={close}>
-                &times;
-                </button>
-                <h4>Register</h4>
-                <form onSubmit={handleSubmit} noValidate>
+        <div className="formWrapper">
+            <button type="button" className="button" onClick={() => setOpen(o => !o)}>
+            Sign Up
+            </button>
+            <Popup open={open} closeOnDocumentClick onClose={closeModal}>
+            <div className="modal">
+                    <button className="close" onClick={closeModal}>
+                    &times;
+                    </button>
+                    <h4>Register</h4>
+                    <form onSubmit={handleSubmit} noValidate>
         
                     <label htmlFor="email">Email</label><input autoComplete="off" className={`input ${errors.email}`} type="email" name="email" onChange={handleChange} value={values.email || ''} required />
                     {errors.email && (
@@ -92,7 +94,7 @@ export const Register = (props) => {
                     <button type="submit" className="regSubmit">Register</button>
                 </form>
             </div>
-                )}
+                
             </Popup>
         </div>
     )

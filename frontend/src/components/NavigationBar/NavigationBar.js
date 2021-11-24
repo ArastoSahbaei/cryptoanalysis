@@ -17,10 +17,10 @@ export const NavigationBar = () => {
         return (authenticatedUser) ? <div className="profileWrapper"><Profile/></div>
         : <div className="logField">
             <div className="item">
-                <Register/>
+                <LoginButton/>
             </div>
             <div className="item">
-                <LoginButton/>
+                <Register/>
             </div>
             
         </div>

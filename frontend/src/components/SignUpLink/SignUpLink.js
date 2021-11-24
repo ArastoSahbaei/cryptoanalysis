@@ -1,11 +1,10 @@
-import React from 'react'
-import { useHistory } from 'react-router-dom';
-import { LoginButton } from '../LoginButton/LoginButton';
+import React, {useContext} from 'react'
 import "./SignUpLink.css"
+import { PopupsContext } from "../../shared/global/provider/popupsProvider"
 
 
 export const SignUpLink = () => {
-    const history = useHistory();
+    const [open, setOpen] = useContext(PopupsContext)
     
     
     
@@ -16,11 +15,7 @@ export const SignUpLink = () => {
             
                 
                 <p>New to Crypto Shuttle? </p>
-                <p onClick={() => history.push('/userregister')} className="register"> Register</p>
-
-                
-            
-
+                <p onClick={() => {setOpen(true)}} className="register"> Register</p>
 
         </div>
 

@@ -3,7 +3,6 @@ import './LoginButton.css'
 import Popup from "reactjs-popup"
 import { UserContext } from "../../shared/global/provider/UserProvider"
 import CryptoShuttleService from "../../utils/api/services/CryptoShuttleService"
-import { Register } from "../register/Register"
 import { PopupsContext } from "../../shared/global/provider/popupsProvider"
 
 
@@ -15,9 +14,7 @@ export const LoginButton = () => {
     const [open, setOpen] = useContext(PopupsContext)
     
 
-    const handlePopup = ()  =>{
-        setOpen(true)
-   }
+    
 
     const handleSubmit = async (event)   => {
         event.preventDefault()
@@ -43,7 +40,7 @@ export const LoginButton = () => {
         <div >
             <Popup  trigger={<button className="triggerButton"> Login</button>} modal >
                 {close => (
-                    <div className="formWrapper">
+                    <div>
                     <form className="wrapper" onSubmit={handleSubmit}>
                         <button className="close" onClick={close}>
                         &times;
@@ -51,7 +48,7 @@ export const LoginButton = () => {
                         <h4>Log In</h4>
                         <div>
                             New to Crypto Shuttle?
-                            <span className="create-account" onClick={() => {close(); handlePopup() }}>Create an account</span>
+                            <span className="create-account" onClick={() => {close(); setOpen(true) }}> Create an account.</span>
                         </div>
                         
                         <div>
