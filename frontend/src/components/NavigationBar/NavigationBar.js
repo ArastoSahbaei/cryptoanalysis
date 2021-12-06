@@ -43,7 +43,7 @@ export const NavigationBar = () => {
                     
                     <img onClick={() => history.push('/')} className="logotype"
                         src={Logotype} alt="Error..." />
-                    <h1 onClick={() => history.push('/')}>Crypto Shuttle</h1>
+                    {/* <h1 onClick={() => history.push('/')}>Crypto Shuttle</h1> */}
                     {/* <span onClick={() => history.push('/userregister')} className="register" >Register</span> */}
                 </div>
                 <Search />
