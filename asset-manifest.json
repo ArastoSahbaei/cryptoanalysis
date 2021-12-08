@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/cryptoanalysis/static/css/main.e7a422ec.chunk.css",
+    "main.js": "/cryptoanalysis/static/js/main.46bc667f.chunk.js",
+    "main.js.map": "/cryptoanalysis/static/js/main.46bc667f.chunk.js.map",
+    "runtime-main.js": "/cryptoanalysis/static/js/runtime-main.26a65d12.js",
+    "runtime-main.js.map": "/cryptoanalysis/static/js/runtime-main.26a65d12.js.map",
+    "static/js/2.874cf974.chunk.js": "/cryptoanalysis/static/js/2.874cf974.chunk.js",
+    "static/js/2.874cf974.chunk.js.map": "/cryptoanalysis/static/js/2.874cf974.chunk.js.map",
+    "static/js/3.0885207e.chunk.js": "/cryptoanalysis/static/js/3.0885207e.chunk.js",
+    "static/js/3.0885207e.chunk.js.map": "/cryptoanalysis/static/js/3.0885207e.chunk.js.map",
+    "index.html": "/cryptoanalysis/index.html",
+    "static/css/main.e7a422ec.chunk.css.map": "/cryptoanalysis/static/css/main.e7a422ec.chunk.css.map",
+    "static/js/2.874cf974.chunk.js.LICENSE.txt": "/cryptoanalysis/static/js/2.874cf974.chunk.js.LICENSE.txt",
+    "static/media/graph-line.e1b21c14.jpg": "/cryptoanalysis/static/media/graph-line.e1b21c14.jpg",
+    "static/media/hadija-saidi-9cgMKmZyhH0-unsplash.ac577b47.jpg": "/cryptoanalysis/static/media/hadija-saidi-9cgMKmZyhH0-unsplash.ac577b47.jpg",
+    "static/media/logotype.5ce7f0fc.svg": "/cryptoanalysis/static/media/logotype.5ce7f0fc.svg",
+    "static/media/rocket-space-x.ce94a25b.jpg": "/cryptoanalysis/static/media/rocket-space-x.ce94a25b.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.26a65d12.js",
+    "static/js/2.874cf974.chunk.js",
+    "static/css/main.e7a422ec.chunk.css",
+    "static/js/main.46bc667f.chunk.js"
+  ]
+}
